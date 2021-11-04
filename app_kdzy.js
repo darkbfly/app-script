@@ -140,7 +140,7 @@ Object.keys(soy_kdzy_mobile).forEach((item) => {
         app_soy_kdzy_mobile = $.getdata('soy_kdzy_mobile').split();
     };
     
-    if(!process.env.soy_kdzy_UA){
+    if(!$.getdata('soy_kdzy_UA')){
 		console.log(`\n【${$.mobile}】：未填写相应变量 soy_kdzy_UA ,将默认分配`);
 	}else{
 	   if ($.getdata('soy_kdzy_UA') && $.getdata('soy_kdzy_UA').indexOf('@') > -1) {
@@ -153,11 +153,11 @@ Object.keys(soy_kdzy_mobile).forEach((item) => {
         app_soy_kdzy_UA = $.getdata('soy_kdzy_UA').split();
     }; 
     
-    Object.keys(soy_kdzy_UA).forEach((item) => {
+    /*Object.keys(soy_kdzy_UA).forEach((item) => {
         if (soy_kdzy_UA[item]) {
             app_soy_kdzy_UA.push(soy_kdzy_UA[item]);
         };
-    }); 
+    }); */
     
 	}
     
@@ -315,7 +315,7 @@ function soy_kdzy_getUserInfo(){
                 if(Math.floor(result.data.money)>=1){
                      await soy_kdzy_withdrawal()
                 }else{
-                     console.log(`\n【${$.mobile}---账号 ${$.index} 用户信息】:\n---用户ID：${result.data.id}\n---水晶数量：${result.data.crystal}\n---游戏余额：${result.data.game_money}\n---水晶数量：${result.data.money}`)
+                     console.log(`\n【${$.mobile}---账号 ${$.index} 用户信息】:\n---用户ID：${result.data.id}\n---水晶数量：${result.data.crystal}\n---游戏余额：${result.data.game_money}\n---任务余额：${result.data.money}`)
                 }
                 
                 if(result.data.sign_days!=7){
