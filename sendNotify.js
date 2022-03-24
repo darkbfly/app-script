@@ -29,11 +29,11 @@
  let SCKEY = '';
  // =======================================QMSG酱通知设置区域===========================================
  //此处填你申请的QMSG_KEY.
- let QMSG_KEY = '';
+let QMSG_KEY = process.env.QMSG_KEY;
  //此处填推送方式： send 私聊消息  group 群消息.
- let QMSG_WAY = '';
+let QMSG_WAY = 'send';
  //非必填参数,指定要接收消息的QQ号或者QQ群，多个以英文逗号分割，例如：12345,12346。指定的QQ号或者QQ群必须在你的管理台已添加。如果调用的是私聊消息推送接口，则指定需要接收消息的QQ，如果调用的是群消息推送接口，则指定需要接收消息的QQ群
- let QMSG_QQ = '';
+let QMSG_QQ = process.env.QMSG_QQ;
  // =======================================Bark App通知设置区域===========================================
  //此处填你BarkAPP的信息(IP/设备码，例如：https://api.day.app/XXXXXXXX)
  let BARK_PUSH = '';

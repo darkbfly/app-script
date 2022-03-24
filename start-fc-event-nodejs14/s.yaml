@@ -43,6 +43,8 @@ services:
         handler: index.handler
         environmentVariables:
           ALIYUN: 'true'
+          QMSG_KEY: ${env.QMSG_KEY}
+          QMSG_QQ: ${env.QMSG_QQ}
         memorySize: 128
         timeout: 300
       triggers:
