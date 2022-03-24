@@ -19,7 +19,9 @@ vars: # 全局变量
   service:
     name: app-deploy-service
     description: '自动部署app服务'
-    logConfig: auto
+    logConfig: 
+      project: 'app-deploy-log-project'
+      logstore: 'app-deploy-log-logstore'
   JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
 services:
