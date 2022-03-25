@@ -14,9 +14,6 @@ jobs:
       ALI_KEYID: ${{ secrets.ALI_KEYID }}
       ALI_KEYSECRET: ${{ secrets.ALI_KEYSECRET }}
       ALI_ACCOUNTID: ${{ secrets.ALI_ACCOUNTID }}
-      PT_PIN: ${{ secrets.PT_PIN }}
-      PT_KEY: ${{ secrets.PT_KEY }}
-      JD_COOKIE: ${{ secrets.JD_COOKIE }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2

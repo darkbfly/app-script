@@ -52,5 +52,5 @@ services:
           type: timer
           config:    
             payload: 'app_zzb'
-            cronExpression: '39 10,13,18 * * * *'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 39 10,13,18 * * * *'
             enable: true
