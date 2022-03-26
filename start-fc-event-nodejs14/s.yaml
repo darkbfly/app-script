@@ -45,6 +45,7 @@ services:
           ALIYUN: 'true'
           QMSG_KEY: ${env.QMSG_KEY}
           QMSG_QQ: ${env.QMSG_QQ}
+          soy_mmyp_data: ${env.soy_mmyp_data}
         memorySize: 128
         timeout: 300
       triggers:
@@ -53,4 +54,10 @@ services:
           config:    
             payload: 'app_zzb'
             cronExpression: 'CRON_TZ=Asia/Shanghai 39 10,13,18 * * * *'
+            enable: true
+        - name: app_mmyp
+          type: timer
+          config:    
+            payload: 'app_mmyp'
+            cronExpression: 'CRON_TZ=Asia/Shanghai 39 25 10,13 * * *'
             enable: true

@@ -3,7 +3,7 @@ on:
   # schedule:
   #   - cron: '10 1,8,15 * * *'
   workflow_dispatch:
-  # push:
+  push:
     # paths:
     #   - 'src/*.*'
 jobs:
@@ -14,6 +14,7 @@ jobs:
       ALI_KEYID: ${{ secrets.ALI_KEYID }}
       ALI_KEYSECRET: ${{ secrets.ALI_KEYSECRET }}
       ALI_ACCOUNTID: ${{ secrets.ALI_ACCOUNTID }}
+      soy_mmyp_data: ${{ secrets.soy_mmyp_data }}
       ALL_SECRETS: ${{ toJson(secrets) }}
     steps:
       - uses: actions/checkout@v2
