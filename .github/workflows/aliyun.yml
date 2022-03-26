@@ -24,7 +24,7 @@ jobs:
           npm install @serverless-devs/s -g
           s config add --AccessKeyID $ALI_KEYID --AccessKeySecret $ALI_KEYSECRET --AccountID $ALI_ACCOUNTID
           mkdir -p ./start-fc-event-nodejs14/code/config
-          cp -r ./*.js ./start-fc-event-nodejs14/code
+          cp -r ./*.* ./start-fc-event-nodejs14/code
           cp -r ./config/*.* ./start-fc-event-nodejs14/code/config
           cd ./start-fc-event-nodejs14
           s deploy -y --use-local
